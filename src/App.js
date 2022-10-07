@@ -4,7 +4,7 @@ import { Table } from "reactstrap";
 import "./App.css";
 function App() {
   const [company, setCompany] = useState([]);
-  useEffect(() => {
+  
     axios
       .post("http://demo2211087.mockable.io/mock", {})
       .then((res) => {
@@ -12,7 +12,7 @@ function App() {
         console.log(res.data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  
   return (
     <div className="App">
       <h2>Company List</h2>
